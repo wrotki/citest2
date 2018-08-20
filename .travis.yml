@@ -2,4 +2,4 @@ sudo: required
 language: ruby
 rvm:
   - 2.3
-
+script: bin/script.sh

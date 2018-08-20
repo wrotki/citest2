@@ -1,6 +1,6 @@
 # Some experiments around CI
 
-[![Travis (.org)](https://img.shields.io/travis/wrotki/citest2.svg)](https://img.shields.io/travis/wrotki/citest2)
+[![Travis (.org)](https://img.shields.io/travis/wrotki/citest2.svg?style=plastic)](https://travis-ci.com/wrotki/citest2)
 
 ## Badges from 
 

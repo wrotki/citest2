@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     aws.instance_type = "t2.micro"
     aws.region = "us-west-2"
     aws.ami = "ami-01811acf3c02e823a"
-    aws.subnet_id = "subnet-d51285b1"
+    aws.subnet_id = "subnet-0435c4e57b336660d"
     aws.elastic_ip = "52.32.7.145"
     override.ssh.username = "ec2-user"
     override.ssh.private_key_path = "~/.ssh/TestKey.pem"

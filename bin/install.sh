@@ -20,16 +20,18 @@ Vagrant.configure("2") do |config|
   config.vm.provider "aws" do |aws,override|
     aws.access_key_id = "$ACCESS_KEY_ID"
     aws.secret_access_key = "$SECRET_ACCESS_KEY"
-    aws.keypair_name = "PolyverseDevelopmentKey"
+    aws.keypair_name = "TestKey"
     aws.instance_type = "t2.micro"
     aws.region = "us-west-2"
     aws.ami = "ami-01811acf3c02e823a"
     aws.subnet_id = "subnet-d51285b1"
     override.ssh.username = "ec2-user"
-    override.ssh.private_key_path = "~/.ssh/PolyverseDevelopmentKey.pem"
+    override.ssh.private_key_path = "~/.ssh/TestKey.pem"
   end
 end
 EOF
+
+head -n 3 ~/.ssh/TestKey.pem
 
 vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
 vagrant up --provider=aws

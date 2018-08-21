@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     aws.ami = "ami-01811acf3c02e823a"
     aws.subnet_id = "subnet-d51285b1"
     override.ssh.username = "ec2-user"
-    override.ssh.private_key_path = "./PolyverseDevelopmentKey.pem"
+    override.ssh.private_key_path = "~/.ssh/PolyverseDevelopmentKey.pem"
   end
 end
 EOF

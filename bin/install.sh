@@ -6,7 +6,7 @@ set -x
 
 cat /etc/*release
 
-wget  https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_linux_amd64.zip
+wget --quiet https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_linux_amd64.zip
 sudo unzip -d /usr/local/bin vagrant_2.1.2_linux_amd64.zip
 
 vagrant plugin install pkg-config
@@ -31,4 +31,5 @@ Vagrant.configure("2") do |config|
 end
 EOF
 
+vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
 vagrant up --provider=aws

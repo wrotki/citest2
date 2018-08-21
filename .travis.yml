@@ -5,6 +5,5 @@ rvm:
 install: bin/install.sh
 script: bin/script.sh
 before_install:
-- mkdir ~\/.ssh
 - openssl aes-256-cbc -K $encrypted_2f79aeb0e40d_key -iv $encrypted_2f79aeb0e40d_iv
-  -in PolyverseDevelopmentKey.pem.enc -out ~\/.ssh/PolyverseDevelopmentKey.pem -d
+  -in PolyverseDevelopmentKey.pem.enc -out ~/.ssh/PolyverseDevelopmentKey.pem -d

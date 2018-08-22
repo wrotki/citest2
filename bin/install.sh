@@ -29,6 +29,7 @@ Vagrant.configure("2") do |config|
     aws.elastic_ip = "52.32.7.145"
     override.ssh.username = "ec2-user"
     override.ssh.private_key_path = "~/.ssh/TestKey.pem"
+    override.nfs.functional = false
   end
 end
 EOF

@@ -4,6 +4,6 @@ set -e
 set -v
 set -x
 
-vagrant destroy
+vagrant destroy --force
 
 echo vagrant-aws instance cleanup complete

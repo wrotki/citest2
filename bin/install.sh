@@ -14,6 +14,8 @@ vagrant plugin install vagrant-aws
 
 echo vagrant-aws plugin installation complete
 
+# CentOS 7.5: ami-00f7c900d2e7133e1
+# ECS AMI 300GB overlay: ami-01811acf3c02e823a
 cat << EOF > ./Vagrantfile
 Vagrant.configure("2") do |config|
   config.vm.box = "dummy"
@@ -23,7 +25,7 @@ Vagrant.configure("2") do |config|
     aws.keypair_name = "TestKey"
     aws.instance_type = "t2.micro"
     aws.region = "us-west-2"
-    aws.ami = "ami-01811acf3c02e823a"
+    aws.ami = "ami-00f7c900d2e7133e1"
     aws.subnet_id = "subnet-0435c4e57b336660d"
     aws.security_groups = ['sg-9555d5ef', 'sg-01d643a9f4402fa7d']
     aws.elastic_ip = "52.32.7.145"

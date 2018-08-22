@@ -34,7 +34,5 @@ Vagrant.configure("2") do |config|
 end
 EOF
 
-head -n 3 ~/.ssh/TestKey.pem
-
 vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
 vagrant up --provider=aws
